@@ -149,7 +149,7 @@ public class MyAdapter extends BaseAdapter {
             todoInFocus.setCompleted(isChecked);
 
             Ion.with(mInflater.getContext())
-                    .load("PUT", "https://nameless-lowlands-79571.herokuapp.com/todos/" +  String.valueOf( todoInFocus.getId()) ).asString();
+                    .load("PUT", "https://radiant-island-23944.herokuapp.com/todo/" +  String.valueOf( todoInFocus.getId()) ).asString();
 
             if(todoInFocus.isCompleted()){
                 compoundButton.setPaintFlags(compoundButton.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
