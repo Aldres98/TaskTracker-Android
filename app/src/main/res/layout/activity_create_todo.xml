@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aldres.myapplication.CreateTodoActivity"
+    android:background="@color/backgroundColor"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_todo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="5dp"
+        android:theme="@style/AppTheme">
+
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_todo_title"
+            android:textColor="@color/systemWhiteColor"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/back_button"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:background="#00000000"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:text="@string/Task_title"
+        android:textColor="@color/systemBlackColor"
+        android:background="@drawable/bottom_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_todo_toolbar" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/task_title_hint"
+        android:layout_margin="15dp"
+        android:inputType="textPersonName"
+        android:text=""
+        android:background="@drawable/all_borders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/categories_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="match_parent"
+        android:textColor="@color/systemBlackColor"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bottom_border"
+        android:text="@string/category_placeholder"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <ListView
+        android:id="@+id/projectsAvaible"
+        android:layout_width="0dp"
+        android:textColor="@color/systemBlackColor"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories_title" />
+
+
+</android.support.constraint.ConstraintLayout>
